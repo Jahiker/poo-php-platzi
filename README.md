@@ -20,3 +20,30 @@ para definir un objeto a partir de una clase se utliza la palabra reservada new
  */
 $user = new User()
 ```
+
+## Propiedades y metodos
+
+Las propiedades son variables y los metodos son funciones
+
+```php
+class Person
+{
+    public $name; // Propiedad
+
+    public function greet() // Metodo
+    {
+        return "Hello $this->name";
+    }
+}
+```
+
+## Extends
+
+Las clases pueden extender de otra y de esta forma heredar las propiedades de la clase padre
+
+```php
+class Admin extends Person
+{
+    public $name = 'Admin';
+}
+```
