@@ -1,17 +1,9 @@
-<?php 
+<?php
+include_once './Person.php';
+include_once './User.php';
+include_once './Admin.php';
 
-class Person {
-    public $name;
-    
-    public function greet() {
-        return "Hello $this->name";
-    }
-}
+$user = new User();
+$user->type = new Admin();
 
-class User {
-    public $type;
-}
-
-class Admin extends Person {
-    public $name = 'admin';
-}
+echo $user->type->greet();
